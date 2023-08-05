@@ -1,24 +1,26 @@
-import logo from './logo.svg';
-import './App.css';
+import EngagementMessagesOverTime from './EngagemetMessages';
 
 function App() {
+  const container = {
+    width: '100vw',
+    height: '100vh',
+    display: 'flex',
+    alignItems: 'center',
+    justifyContent: 'center',
+    backgroundColor: '#0C0C0F',
+  };
+  const style = {
+    width: 'calc(100vw * (2 / 3))',
+    height: 'calc(100vh * (2 / 3))',
+  };
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <div style={container}>
+        <div style={style}>
+          <EngagementMessagesOverTime />
+        </div>
+      </div>
+    </>
   );
 }
 
